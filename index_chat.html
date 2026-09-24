@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Praktiske videoer og læringsmateriale til kvægbrugere.">
   <title>Kvægviden – videobibliotek</title>
-  <link rel="icon" type="image/png" href="image 1.png">
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23005521'/%3E%3Cpath d='M18 22l8 5h12l8-5-3 12c0 10-5 16-11 16s-11-6-11-16z' fill='%23fff'/%3E%3Ccircle cx='27' cy='35' r='2' fill='%23005521'/%3E%3Ccircle cx='37' cy='35' r='2' fill='%23005521'/%3E%3C/svg%3E">
   <style>
     :root {
       --green: #005521;
@@ -93,8 +94,8 @@
     }
 
     .brand-mark {
-      width: 3rem;
-      height: 3rem;
+      width: 6rem;
+      height: 6srem;
       display: grid;
       place-items: center;
       color: var(--white);
@@ -131,14 +132,14 @@
     .nav-wrap { background: var(--mint); }
 
     .main-nav {
-      min-height: 3.35rem;
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-      gap: 2rem;
-      overflow-x: auto;
-      scrollbar-width: thin;
-    }
+        min-height: 3.35rem;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        gap: 2rem;
+        overflow-x: auto;
+        scrollbar-width: thin;
+      }
 
     .main-nav a {
       position: relative;
@@ -146,7 +147,7 @@
       align-items: center;
       flex: 0 0 auto;
       color: var(--muted);
-      font-weight: 700;
+      font-weight: 1000;
       text-decoration: none;
     }
 
@@ -168,22 +169,6 @@
 
     .main-nav a:hover::after,
     .main-nav a:focus-visible::after { transform: scaleX(1); }
-
-    .main-nav .review-link {
-      align-self: center;
-      min-height: 2.35rem;
-      padding-inline: 1rem;
-      color: var(--white);
-      background: var(--green);
-    }
-
-    .main-nav .review-link:hover,
-    .main-nav .review-link:focus-visible {
-      color: var(--white);
-      background: var(--green-dark);
-    }
-
-    .main-nav .review-link::after { display: none; }
 
     .hero {
       position: relative;
@@ -405,10 +390,7 @@
       .topbar { min-height: 4.5rem; }
       .header-note { display: none; }
       .brand-mark { width: 2.65rem; height: 2.65rem; }
-      .main-nav {
-        justify-content: flex-start;
-        gap: 1.25rem;
-      }
+      .main-nav { gap: 1.25rem; }
       .hero-inner { padding-block: 2.8rem 3.5rem; }
       h1 { font-size: clamp(2.7rem, 15vw, 4rem); }
       .featured-video { padding: 0 0 0.7rem 0.7rem; }
@@ -437,14 +419,13 @@
           <span>Video materiale demo</span>
         </span>
       </a>
-      <p class="header-note">Videomateriale til kvægbrugere</p>
+      <p class="header-note">Adgang givet til folk med links</p>
     </div>
     <div class="nav-wrap">
       <nav class="main-nav" aria-label="Indhold på siden">
         <a href="#billedfremvisning">Billedfremvisning</a>
         <a href="#brevkassen">Josefines Brevkasse</a>
         <a href="#interview">Interview med Caroline</a>
-        <a class="review-link" href="kladder.html">Videoer under udvikling</a>
       </nav>
     </div>
   </header>
@@ -556,7 +537,7 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p class="footer-title">Sammen mod Salmonella Dublin</p>
+      <p class="footer-title">Kvægviden</p>
       <p class="footer-note">En prøveside med læringsmateriale til kvægbrugere.</p>
     </div>
   </footer>

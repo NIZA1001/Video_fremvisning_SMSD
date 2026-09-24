@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gennemse videoer, der stadig er under udarbejdelse.">
+  <title>Videoer under udvikling – Sammen mod Salmonella Dublin</title>
+  <link rel="icon" type="image/png" href="image 1.png">
+  <style>
+    :root {
+      --green: #005521;
+      --green-dark: #003d18;
+      --mint: #f2f6f4;
+      --beige: #e8e0d0;
+      --ink: #141414;
+      --muted: #5d615f;
+      --white: #ffffff;
+      --line: #d9dedb;
+      --max-width: 1040px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--mint);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    a:focus-visible,
+    iframe:focus-visible {
+      outline: 3px solid #96c1a7;
+      outline-offset: 4px;
+    }
+
+    .topbar {
+      color: var(--white);
+      background: var(--green-dark);
+    }
+
+    .topbar-inner,
+    main,
+    .footer-inner {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin-inline: auto;
+    }
+
+    .topbar-inner {
+      min-height: 4.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand-mark {
+      width: 3rem;
+      height: 3rem;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background: var(--green);
+      border-radius: 50%;
+    }
+
+
+
+    .brand {
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back-link {
+      padding: 0.5rem 0.8rem;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+    }
+
+    .back-link:hover { background: rgba(255, 255, 255, 0.1); }
+
+    main { padding-block: clamp(2.5rem, 6vw, 5rem); }
+
+    .intro {
+      max-width: 46rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin: 0 0 0.8rem;
+      color: var(--green-dark);
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .status::before {
+      content: "";
+      width: 0.65rem;
+      height: 0.65rem;
+      background: #d79a19;
+      border-radius: 50%;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.12;
+    }
+
+    h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      letter-spacing: -0.04em;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .notice {
+      margin-bottom: 3rem;
+      padding: 1rem 1.2rem;
+      background: var(--beige);
+      border-left: 5px solid var(--green);
+    }
+
+    .notice strong { color: var(--green-dark); }
+
+    .series + .series { margin-top: 3.5rem; }
+
+    .series-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .series-heading h2 {
+      margin: 0;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+    }
+
+    .series-heading span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .video-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .video-card {
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .video-frame {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #102218;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 1rem;
+    }
+
+    .video-title h3 {
+      margin: 0;
+      font-size: 1.08rem;
+    }
+
+
+
+    .billede {
+      size: 2cm;
+
+
+    }
+
+    .draft-badge {
+      padding: 0.2rem 0.55rem;
+      color: #664600;
+      background: #f7e7bd;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    footer {
+      color: rgba(255, 255, 255, 0.75);
+      background: var(--green-dark);
+    }
+
+    .footer-inner { padding-block: 1.75rem; }
+
+    .footer-inner p { margin: 0; }
+
+    @media (max-width: 700px) {
+      .video-list { grid-template-columns: 1fr; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding-block: 1rem; }
+      .series-heading { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    
+    <div class="topbar-inner">
+      <img class="brand-mark" src="image 1.png" href="index.html">
+      <a class="brand" href="index.html">Sammen mod Salmonella Dublin</a>
+      <a class="back-link" href="index.html">← Tilbage til videobiblioteket</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro">
+      <p class="status">Materiale under udvikling</p>
+      <h1>Videoer til gennemsyn</h1>
+      <p>Her kan du se de videoer, der endnu ikke er helt færdige.</p>
+    </div>
+
+    <div class="notice">
+      <strong>Bemærk:</strong> Indhold, lyd, grafik og klipning kan stadig blive ændret.
+    </div>
+
+    <section class="series" aria-labelledby="soeren-title">
+      <div class="series-heading">
+        <h2 id="soeren-title">Søren Lundgaard, Mads fortæller</h2>
+        <span>2 videoer</span>
+      </div>
+
+      <div class="video-list">
+
+        <!-- Video 1 -->
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://youtube.com/embed/mNw51KdY34g"
+              title="Søren Lundgaard – video 1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="video-title">
+            <h3>Version 0.2</h3>
+            <span class="draft-badge">Kladde</span>
+          </div>
+        </article>
+
+        <!-- Video 2 -->
+        <article class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/w_gQS2SYw2s"
+              title="Mads fortæller"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="video-title">
+            <h3>Version 0.1</h3>
+            <span class="draft-badge">Kladde</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    
+
+  <footer>
+    <div class="footer-inner"><p>Intern side til gennemsyn af videomateriale.</p></div>
+  </footer>
+</body>
+</html>
