@@ -9,3 +9,4 @@ image1.save("qr-1.png")
 
 image2 = qr.make(url_kvæg2)
 image2.save("qr-2.png")
+
